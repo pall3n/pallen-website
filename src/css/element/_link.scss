@@ -1,0 +1,20 @@
+a {
+	text-decoration: none;
+
+	&.link {
+		font-weight: 400;
+		color: $Colour-base;
+		border-bottom: 1px solid $Colour-base;
+		outline: none;
+
+		transition: all .3s;
+
+		&:hover,
+		&:focus {
+			color: $Colour-primary;
+			border-color: $Colour-primary;
+
+			transition: all .3s;
+		}
+	}
+}

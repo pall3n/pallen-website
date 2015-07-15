@@ -1,0 +1,40 @@
+@if $use-panel == true {
+
+	.panel--intro {
+		background-color: $colour__white;
+		background: url(../img/me-darken2.jpg) center center no-repeat;
+		background-size: cover;
+		background-attachment:fixed;
+
+		animation: fade-in 1.2s;
+	}
+
+	.panel--products {
+		transform: translateY(10px);
+		opacity: 0;
+
+		animation: slide-up 1.4s linear .2s;
+		-webkit-animation-fill-mode: forwards;
+	}
+
+	.panel__nav {
+		animation: slide-down 1s linear;
+	}
+
+	.panel__header {
+		margin-top: $bl*5;
+		margin-bottom: $bl*3;
+
+		animation: slide-up 1.2s linear;
+
+		@include respond-to(med) {
+			margin-top: $bl*5 + 60px;
+			margin-bottom: $bl*5;
+		}
+	}
+
+	.panel__project {
+		margin-bottom: $bl*6;
+	}
+
+}

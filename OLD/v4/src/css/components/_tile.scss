@@ -1,0 +1,23 @@
+@if $use-tile == true {
+
+	.tile {
+		position: relative;
+		padding: $bl $bl 0;
+		padding: $bl;
+		margin-bottom: $b*2;
+		box-sizing: border-box;
+		height: $bl*12;
+
+		&.upload--state {
+			background: $colour__beige--dark;
+			padding-top: 72px;
+		}
+	}
+
+	.tile__footer {
+		position: absolute;
+		right: $bl;
+		bottom: 0;
+		left: $bl;
+	}
+}

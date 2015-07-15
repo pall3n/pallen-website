@@ -1,0 +1,26 @@
+.logo {
+	text-indent: -99999px;
+
+	background: url(../img/paperdreamslogo.png) center center no-repeat;
+	background: url(../img/paperdreamslogo.svg) center center no-repeat;
+	background-size: auto 100%;
+
+	width: auto;
+	height: $Lead * 3;
+	// margin: ($Lead * 2) auto 0;
+
+	// @media only screen and (min-width : 760px) and (min-height : 1032px) {
+	// 	width: 208px;
+	// 	height: $Lead * 9;
+	// }
+
+	// margin-top: $Lead * 2;
+
+	@include respond-to(520px) {
+		height: $Lead * 4;
+	}
+
+	@include respond-to(940px) {
+		margin-top: $Lead * 2;
+	}
+}

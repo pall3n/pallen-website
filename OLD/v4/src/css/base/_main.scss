@@ -1,0 +1,13 @@
+html,
+body {
+	min-height: 100%;
+	height: 100%;
+}
+
+html {
+	font-size: 85%;
+
+	@include respond-to(med) {
+		font-size: 100%;
+	}
+}

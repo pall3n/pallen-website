@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Headings
+   ========================================================================== */
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+ h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+   color: $colour__base;
+}
+
+h1,
+.h1 {
+   @include font-stack('heading');
+   @include font-size($fs__1);
+   @include line-height($fs__1, 1.4);
+   margin: 0 0 $gutter 0;
+   color: $colour__base;
+
+   @include respond-to(med) {
+      @include font-size($fs__1*1.15);
+      @include line-height($fs__1*1.15, 1.4);
+   }
+
+   @include respond-to(large) {
+      @include font-size($fs__1*1.25);
+      @include line-height($fs__1*1.25, 1.4);
+   }
+}

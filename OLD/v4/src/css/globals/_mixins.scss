@@ -1,0 +1,202 @@
+/*	MIXINS	*/
+//	Media query mixin
+@mixin respond-to($media) {
+	@if $media == 'med' {
+		@media only screen and (min-width : $break--m) { @content; }
+	} @elseif $media == 'large' {
+		@media only screen and (min-width : $break--l) { @content; }
+	} @elseif $media == 'xlarge' {
+		@media only screen and (min-width : $break--xl) { @content; }
+	}
+}
+
+
+// Font stack mixin
+@mixin font-stack($level: "body", $weight: "regular") {
+	@if ($level == "logo") {
+		font-family: 'omnes-pro';
+		font-weight: $fw__bold;
+		text-transform: lowercase;
+		letter-spacing: 0.2px;
+	}
+
+	@else if ($level == "heading") {
+		font-family: 'acta-display', serif;
+		font-weight: 500;
+		font-style: normal;
+		letter-spacing: 0.5px;
+	}
+
+	@else if ($level == "subheading") {
+		font-family: 'Gotham SSm A', 'Gotham SSm B', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	@else if ($level == "body") {
+		font-family: 'soleil', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	@else if ($level == "italic") {
+		font-family: 'georgia', serif;
+		font-weight: $fw__normal;
+		font-style: italic;
+	}
+
+	@else if ($level == "icon") {
+		font-family: 'popcorn';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+
+		text-decoration: none;
+		color: $colour__base;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	@else {
+
+		@if ($weight == "heavy") {
+			font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: $fw__bold;
+		}
+
+		@if ($weight == "light") {
+			font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: $fw__light;
+		}
+
+		@else {
+			font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+			font-weight: $fw__normal;
+		}
+
+	}
+
+}
+
+
+//	REM Font size mixin
+@mixin font-size($font-size: $fs__b) {
+	font-size: $font-size + 0px;
+	font-size: convert-font-to-relative($font-size) + 0rem;	
+}
+
+@mixin line-height($font-size: $fs__b, $increase: 1.5) {
+	$size: $font-size * $increase;
+
+	line-height: $size + 0px;
+	line-height: convert-font-to-relative($size) + 0rem;
+}
+
+@mixin logo-type($font-size: $fs__1) {
+	@include font-stack('logo');
+	@include font-size($font-size);
+	@include line-height($font-size);
+}
+
+@mixin header-type($font-size: $fs__1, $baseline: $bl) {
+	@include font-stack('heading');
+	@include font-size($font-size);
+	@include line-height($font-size);
+	margin: 0 0 $baseline 0;
+}
+
+@mixin sub-header-type($font-size: $fs__3, $baseline: $bl) {
+	@include font-stack('subheading');
+	@include font-size($font-size);
+	@include line-height($font-size);
+	margin: 0 0 $baseline 0;
+}
+
+@mixin body-type($font-size: $fs__b, $baseline: $bl) {
+	@include font-stack('body');
+	@include font-size($font-size);
+	@include line-height($font-size);
+	margin: 0 0 $baseline 0;
+}
+
+
+/*	MIXINS  */
+@mixin container() {
+	padding: 0;
+	margin: 0;
+	*zoom: 1;
+	// overflow: auto;
+
+	&:before,
+	&:after {
+		display: table;
+		line-height: 0;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin row {
+	// width: 100%;
+	*zoom: 1;
+	position: relative;
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		display: table;
+		line-height: 0;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin row-nested {
+	// width: 100%;
+	margin-left: -$b;
+	margin-right: -$b;
+	*zoom: 1;
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		display: table;
+		line-height: 0;
+		content: "";
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// FLUID GRID
+@mixin column($span: '12', $margin: 'true') {
+	display: block;
+	float: left;
+
+	@if ($span == '12') {
+		width: 100%;
+	} @else {
+		width: percentage($span / $columns);
+	}
+	padding-left: $gutter / 2;
+	padding-right: $gutter / 2;
+	box-sizing: border-box;
+}
+
+@mixin column-offset($span: '12') {
+	margin-left: percentage($span / $columns);
+}

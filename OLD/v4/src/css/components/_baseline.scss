@@ -1,0 +1,102 @@
+@function line-height-baseline($value) {
+	@if (unitless($value)) {
+		@return ($value * $bl) + 0px;
+	} @else {
+		@return (ceil($value / $bl) * $bl) + 0px;
+	}
+}
+
+@mixin line-height-baseline($value) {
+    $line-height: line-height-baseline($value);
+    @include output-rem('line-height', $line-height);
+}
+
+@function leader-baseline($line-height, $font-size: $fs__b) {
+	@return round(($line-height) - ((($line-height - $font-size) / 2) + $font-size));
+}
+
+@function trailer-baseline($line-height, $leader, $extra-trailing) {
+	$extra-trailing: $extra-trailing * $bl;
+
+	$trail: ($line-height + $leader) / $bl;
+	@return round((ceil($trail) - $trail) * $bl) + $extra-trailing;
+}
+
+@mixin output-rem($element, $value) {
+	#{$element}: $value + 0px;
+	#{$element}: convert-font-to-relative($value) + 0rem;
+}
+
+@mixin set-baseline($font-size, $extra-trailing: 0, $half-line: false) {
+
+	//calc line height and print it
+	$line-height: line-height-baseline($font-size);
+	@include output-rem('line-height', $line-height);
+	
+	//calc leader and print it
+	$leader: leader-baseline($line-height, $font-size);
+	@include output-rem('padding-top', $leader);
+	
+	//calc trailer and print it
+	$trailer: trailer-baseline($line-height, $leader, $extra-trailing);
+	@include output-rem('margin-bottom', $trailer);
+}
+
+@mixin border-baseline($font-size, $border-width) {
+	//calc line height
+	$line-height: line-height-baseline($font-size);
+
+	//minus the border width off the line height and update variable
+    $line-height: $line-height + 0px - $border-width;
+	
+	//output the calc line height
+	@include output-rem('line-height', $line-height);
+}
+
+
+@if $show-baseline == true {
+	// Calendar styling.
+	//
+	// Markup:
+	//<body></body>
+	//
+	// Styleguide 2.1.0.
+	body {
+		background: $colour__beige url(../img/baseline2.png) top left repeat;
+	}
+}
+
+@if $use-baseline == true {
+
+	// h1,
+	// .h1 {
+	// 	@include set-baseline($fs__1, 1);
+	// }
+
+	// .h1__trailing {
+	// 	@include set-baseline($fs__1);
+	// }
+
+	// h2,
+	// .h2 {
+	// 	@include set-baseline($fs__2);
+	// }
+
+	// h3,
+	// .h3 {
+	// 	@include set-baseline($fs__3);
+	// }
+
+	// h4,
+	// .h4 {
+	// 	@include set-baseline($fs__4);
+	// }
+
+	// p,
+	// .p,
+	// .p__tiny,
+	// .btn--small {
+	// 	@include set-baseline($fs__b);
+	// }
+
+}

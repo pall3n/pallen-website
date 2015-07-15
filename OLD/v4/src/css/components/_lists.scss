@@ -1,0 +1,37 @@
+@if $use-lists == true {
+
+	.list,
+	.nested-list {
+		margin: 0 0 $bl;
+
+		li {
+			// line-height: line-height-baseline($fs__b);
+
+			@include set-baseline($fs__b, 0, true);
+		}
+	}
+
+	.list {
+		padding-top: $bl;
+	}
+	
+	.list__inline {
+		margin: 0;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: $b/2;
+		}
+	}
+
+	.list__grid {
+		overflow: auto;
+		margin: 0;
+	}
+
+	.list__short {
+		margin: 0;
+	}
+
+}

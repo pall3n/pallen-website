@@ -1,0 +1,153 @@
+@if $use-buttons == true {
+
+	// Button styling.
+	//
+	// Markup:
+	//<a href="#" class="btn">Click Click</a>
+	//
+	// Styleguide 3.1.0.
+	.btn,
+	.btn__circle {
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: 100%;
+		font-weight: 300;
+		letter-spacing: .75px;
+		text-decoration: none;
+		text-align: center;
+		// border: 2px solid $colour__base;
+		background-color: transparent;
+		color: $colour__base;
+		box-sizing: border-box;
+		transition: background-color .3s;
+
+		margin-left: $b;
+
+		&[class*="icon-"] {
+			color: $colour__base;
+		}
+
+		&:hover {
+			// border: 2px solid $colour__base;
+			background-color: $colour__base;
+			color: $colour__white;
+			transition: all .3s;
+		}
+	}
+
+	.btn {
+		padding: 0 $bl;
+		@include line-height-baseline($fs__2);
+	}
+
+	.btn--small {
+		@include font-size($fs__4);
+		// @include line-height($fs__b);
+		@include set-baseline($fs__b);
+		@include border-baseline($fs__b, 4px);
+		padding-left: $bl/2;
+		padding-right: $bl/2;
+	}
+
+	.btn__circle {
+		width: $bl*2;
+		height: $bl*2;
+		line-height: $bl*2;
+		border-radius: line-height-baseline($fs__2);
+		padding: 0;
+
+		&[class*="icon-"] {
+			// @include font-size($fs__3);
+			font-size: $fs__3;
+		}
+	}
+
+	.btn--clear,
+	.btn__circle--clear {
+		background-color: transparent;
+		color: $colour__green;
+
+		&[class*="icon-"] {
+			color: $colour__green;
+		}
+	}
+
+	.btn__circle--small {
+		width: line-height($fs__b);
+		height: line-height($fs__b);
+		@include line-height($fs__b, 1.49);
+
+		&[class*="icon-"] {
+			@include font-size($fs__b--small);
+		}
+	}
+
+	.btn--light {
+		border-color: $colour__base;
+		// color: $colour__white;
+
+		&[class*="icon-"] {
+			color: $colour__base;
+		}
+	}
+
+	.btn__dropdown {
+		position: relative;
+
+		min-width: $b*7;
+		text-align: left;
+		padding-right: 34px;
+		padding-left: 10px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			margin-top: -2.5px;
+			right: 10px;
+			display: block;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid $colour__base;
+		}
+	}
+
+	.btn--email {
+		overflow: hidden;
+		text-align: left;
+		width: $bl*2;
+		padding-left: $b*2;
+		padding-right: $b*2;
+		transition: width .2s, background-color .3s;
+
+		em {
+			color: $colour__white;
+			font-size: $fs__3;
+		}
+
+		p {
+			display: inline-block;
+			color: $colour__white;
+			padding-left: $b*1.5;
+			margin-bottom: 0;
+			// line-height: 42px;
+			transform: translate(100%, 0);
+			transition: transform .3s;
+		}
+
+		&:hover {
+			// width: auto;
+			width: $bl*7.3;
+			transition: width .3s;
+
+			p {
+				transform: translate(0, 0);
+				transition: transform .3s;
+			}
+		}
+	}
+}

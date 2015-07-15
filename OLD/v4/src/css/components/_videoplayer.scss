@@ -1,0 +1,11 @@
+@if $use-videoplayer == true {
+
+	.videoplayer {
+		width: 100%;
+		height: 566px;
+		overflow: hidden;
+
+		background-color: rgba($colour__base, .1);
+	}
+
+}

@@ -1,0 +1,70 @@
+/*	VARIABLES   */
+
+//	Grid
+$container-width: 1250px;
+$columns: 12;
+$gutter-width: 20px;
+$fluid-width: 100%;
+$gutter: 32px;
+$gutter: 6%;
+
+// SPACING
+$b: 8px;
+
+
+//	BREAK POINTS
+$break--m: 520px;
+$break--l: 840px;
+$break--xl: 1280px;
+
+
+//	COLOURS
+$colour__white: #fff;
+$colour__white--darken: darken($colour__white, 5%);
+
+$colour__black: #000;
+$colour__dark: #666;
+
+$colour__base: #000;
+$colour__base--lighten: lighten(#5F605F, 10%);
+$colour__base--light: #9C9D9B;
+$colour__base--darken: darken(#5F605F, 10%);
+
+$colour__beige: #fff;
+$colour__beige--darken: #E1E0DD;
+$colour__beige--dark: darken($colour__beige, 10%);
+$colour__beige--lighten: lighten($colour__beige, 2%);
+$colour__beige--light: lighten($colour__beige, 4%);
+
+$colour__green: #6DD5C6;
+$colour__green--darken: darken($colour__green, 10%);
+
+
+//	Fonts
+$bl: 24px;
+
+$fs__b: 18px;
+$fs__b--small: $fs__b - 2px;
+
+// $fs__1: 50px;
+// $fs__1--small: $fs__1 - 2px;
+$fs__1: 50px;
+$fs__1--small: $fs__1 - 4px;
+$fs__2: 36px;
+$fs__2--small: $fs__2 - 4px;
+$fs__3: 21px;
+$fs__3--small: $fs__3 - 2px;
+$fs__4: 12px;
+$fs__4--small: $fs__4 - 2px;
+$fs__5: 9px;
+$fs__5--small: $fs__5 - 2px;
+$fs__6: 6px;
+$fs__6--small: $fs__6 - 2px;
+
+$is__1: 50px;
+$is__1--large: 26px;
+$is__1--large: 20px;
+
+$fw__bold: 500;
+$fw__med: 400;
+$fw__normal: 400;

@@ -1,0 +1,56 @@
+//	Styles file
+@import "_setup.scss";
+
+//	Globals
+@import "globals/_functions.scss";
+@import "globals/_variables.scss";
+@import "globals/_mixins.scss";
+@import "globals/_helpers.scss";
+@import "globals/_keyframes.scss";
+
+
+//	Base files
+@import "base/_normalize.scss";
+@import "base/_main.scss";
+@import "base/_headings.scss";
+@import "base/_paragraphs.scss";
+// @import "base/_lists.scss";
+// @import "base/_img.scss";
+
+
+//	Components
+
+// Grid
+//
+// Styleguide 1.
+@import "components/_grid.scss";
+
+// Baseline Grid
+//
+// Styleguide 2.
+@import "components/_baseline.scss";
+
+// Buttons
+//
+// Styleguide 3.
+@import "components/_buttons.scss";
+// @import "components/_links.scss";
+@import "components/_icons.scss";
+// @import "components/_formfields.scss";
+// @import "components/_lists.scss";
+@import "components/_navbar.scss";
+// @import "components/_tile.scss";
+// @import "components/_dropdown.scss";
+// @import "components/_videoplayer.scss";
+@import "components/_panel.scss";
+// @import "components/_reveal.scss";
+// @import "components/_paint.scss";
+@import "components/_type.scss";
+
+@import "components/_footer.scss";
+
+
+
+//	PROJECTS
+
+@import "projects/_rachel.scss";

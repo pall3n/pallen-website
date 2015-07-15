@@ -1,0 +1,138 @@
+@if $use-grid == true {
+	
+	// Calendar styling.
+	//
+	// Markup:
+	//<div class="container"><div class="row"><div class="col12"></div></div></div>
+	//
+	// Styleguide 3.1.0.
+	.container {
+		@include container();
+		position: relative;
+		width: 100%;
+		max-width: $break--xl;
+		min-height: 100%;
+		margin: 0 auto;
+	}
+
+	.row {
+		@include row();
+	}
+
+	.row--nested {
+		@include row-nested();
+	}
+
+	.col1,
+	.col2,
+	.col3,
+	.col4,
+	.col5,
+	.col6 {
+		@include column(6);
+	}
+
+	.col7,
+	.col8,
+	.col9,
+	.col10,
+	.col11,
+	.col12 {
+		@include column(12);
+	}
+
+	@include respond-to(med) {
+		.col1,
+		.col2,
+		.col3,
+		.col4 {
+			@include column(4);
+		}
+
+		.col5,
+		.col6
+		.col7,
+		.col8 {
+			@include column(8);
+		}
+
+		.col9,
+		.col10,
+		.col11,
+		.col12 {
+			@include column(12);
+		}
+	}
+
+	@include respond-to(large) {
+		.col1 {
+			@include column(1);
+		}
+
+		.col2 {
+			@include column(2);
+		}
+
+		.col3 {
+			@include column(3);
+		}
+
+		.col4 {
+			@include column(4);
+		}
+
+		.col5 {
+			@include column(5);
+		}
+
+		.col6 {
+			@include column(6);
+		}
+
+		.col7 {
+			@include column(7);
+		}
+
+		.col8 {
+			@include column(8);
+		}
+
+		.col9 {
+			@include column(9);
+		}
+
+		.col10 {
+			@include column(10);
+		}
+		
+		.col11 {
+			@include column(11);
+		}
+
+		.col12 {
+			@include column(12);
+		}
+	}
+
+
+	@include respond-to(med) {
+		.offset1 {
+			// @include column-offset(0);
+		}
+
+		.offset2 {
+			@include column-offset(2);
+		}
+	}
+
+	@include respond-to(large) {
+		.offset1 {
+			@include column-offset(1);
+		}
+
+		.offset2 {
+			@include column-offset(2);
+		}
+	}
+
+}

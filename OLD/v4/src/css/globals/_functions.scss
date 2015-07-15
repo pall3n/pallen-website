@@ -1,0 +1,21 @@
+/*	FUNCTIONS	*/
+@function em($size, $font-size: $fs__b) {
+	@if $size == 0 { @return 0 }
+	@return $size / $font-size + 0em;
+}
+
+@function convert-font-to-relative($size) {
+	@return ($size / $fs__b);
+}
+
+@function perc($width, $context: $max-width) {
+	@return percentage($width / $context);
+}
+
+@function column-width($span: '12') {
+	@return percentage($span / $columns);
+}
+
+@function line-height($font-size: $fs__b, $increase: 1.5) {
+	@return $font-size * $increase;
+}

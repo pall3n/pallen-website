@@ -1,0 +1,31 @@
+@if $use-paint == true {
+	
+	.paint__default {
+		background-color: $colour__base;
+	}
+
+	.paint__base {
+		background-color: $colour__beige;
+	}
+
+	.paint__base--dark {
+		background-color: $colour__beige--dark;
+	}
+
+	.paint__primary {
+		background-color: $colour__green;
+	}
+
+	.paint__sec {
+		background-color: $colour__white;
+	}
+	
+	.paint__alert {
+		background-color: $colour__white;
+	}
+
+	.paint__notification {
+		background-color: $colour__white;
+	}
+	
+}

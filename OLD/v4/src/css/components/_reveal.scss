@@ -1,0 +1,25 @@
+@if $use-reveal == true {
+	
+	.reveal {
+		opacity: 0;
+		transform: translateX(4px);
+		transition: opacity .5s, transform .3s;
+
+		
+	}
+
+	.reveal--up {
+		opacity: 0;
+		transform: translateY(4px);
+		transition: opacity .5s, transform .3s;
+	}
+
+
+	.reveal__wrap:hover .reveal,
+	.reveal__wrap:hover .reveal--up, {
+			opacity: 1;
+			transform: translateX(0);
+			transition: opacity .5s, transform .3s;
+		}
+
+}

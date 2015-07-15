@@ -1,0 +1,43 @@
+@if $use-dropdown == true {
+
+	.dropdown {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.dropdown__menu {
+		display: none;
+		overflow: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 1000;
+		margin: 0;
+		background: $colour__white;
+		border: 1px solid $colour__white--darken;
+		max-height: 0;
+		min-width: $b*9;
+		box-sizing: border-box;
+
+		transition: max-height 1s;
+
+		&.is-visible {
+			display: block;
+			max-height: 150px;
+
+			transition: max-height 2s;
+		}
+
+		a {
+			display: block;
+			padding: 6px $b;
+			margin-bottom: 0;
+
+			&:hover {
+				color: $colour__base--darken;
+				background: $colour__white--darken;
+			}
+		}
+}
+
+}

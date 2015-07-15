@@ -1,0 +1,151 @@
+@if $use-formfields == true {
+	
+	form {
+		margin: 0;
+		overflow: auto;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		width: 100%;
+		padding: $b*.75 $b;
+		margin-bottom: $b*.5;
+		border: none;
+		background: transparent;
+		@include body-type($fs__b);
+		color: $colour__base;
+		box-sizing: border-box;
+
+		outline: none;
+
+		// &:focus
+		// 	background: darken($colour__beige--dark, 6%);
+		// 	background: rgba(0,0,0,.1);
+		// }
+
+		&.slim {
+			padding-left: $b*.75;
+			padding-right: $b*.75;
+
+			padding: 10px $b*.75;
+
+			margin-bottom: 0;
+		}
+
+		&.input__underline {
+			border-bottom: 1px solid $colour__base--light;
+			// padding-top: 2px;
+			// padding-bottom: 2px;
+			padding: 0;
+			margin-top: 22px;
+
+			@include set-baseline($fs__b);
+
+			&:focus {
+				border-bottom-color: $colour__base;
+			}
+		}
+
+		em +& {
+			width: auto;
+		}
+	}
+
+	textarea {
+		height: $b*6.5;
+		resize: none;
+	}
+
+	::-webkit-input-placeholder {
+	   color: $colour__base--light;
+	   // border-bottom: 1px solid $colour__base--light;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: $colour__base--light;
+	   // border-bottom: 1px solid $colour__base--light;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: $colour__base--light;
+	   // border-bottom: 1px solid $colour__base--light;
+	}
+
+	:-ms-input-placeholder {  
+	   color: $colour__base--light;
+	   // border-bottom: 1px solid $colour__base--light;
+	}
+
+	.progressbar {
+		width: 70%;
+		height: $b*.5;
+		margin-left: 15%;
+		margin-bottom: $b*2;
+		position: relative;
+		background: $colour__beige;
+		border-radius: 4px;
+
+		> span {
+			display: block;
+			height: 100%;
+			background-color: $colour__white;
+			border-radius: 4px;
+			position: relative;
+			overflow: hidden;
+		}
+	}
+
+	.select {
+		float: left;
+		position: relative;
+		@include body-type($fs__b, 0);
+		margin-right: $b*.5;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 10px;
+			right: $b*.25;
+			width: 0; 
+			height: 0; 
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+			
+			border-top: 6px solid $colour__white;
+		}
+
+		&.small {
+			@include header-type($fs__b--small, 0);
+			font-weight: $fw__bold;
+			margin-right: $b*.5;
+		}
+
+		select {
+			width: auto;
+			background: $colour__dark;
+			padding: $b*.25 $b*1.25 $b*.25 $b*.25;
+			color: $colour__white;
+			border: 0;
+			border-radius: 3px;
+			-webkit-appearance: none;
+		}
+
+		&.plain {
+			&:before {
+				border-top-color: $colour__base;
+				top: 16px;
+			}
+
+			select {
+				color: $colour__base;
+				background: transparent;
+				padding-top: $b*.5;
+				padding-bottom: $b*.5;
+				outline: none;
+			}
+		}
+	}
+
+}

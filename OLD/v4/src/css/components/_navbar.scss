@@ -1,0 +1,30 @@
+@if $use-navbar == true {
+
+	.navbar {
+		background-color: $colour__white;
+		padding: $bl $gutter*1.5;
+		// margin-bottom: $bl*2;
+	}
+
+	.navbar__nav {
+		display: inline-block;
+		margin: 0;
+	}
+
+	.navbar__logo {
+		display: inline-block;
+		text-decoration: none;
+		// @include font-size($fs__b);
+		@include line-height-baseline(2);
+		color: $colour__base;
+		padding-right: $b;
+		margin-right: $gutter;
+	}
+
+	.navbar__item {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: $b/2;
+	}
+
+}

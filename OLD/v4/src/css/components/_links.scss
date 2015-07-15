@@ -1,0 +1,13 @@
+@if $use-links == true {
+	
+	.link {
+		display: inline-block;
+		text-decoration: none;
+		color: $colour__green;
+	}
+
+	.link--dark {
+		font-weight: 500;
+		color: $colour__base;
+	}
+}
