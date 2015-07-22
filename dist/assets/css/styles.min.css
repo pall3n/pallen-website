@@ -18,7 +18,7 @@ body {
 }
 
 html {
-  font-family: "Effra", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Effra","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -70,16 +70,12 @@ input[type="checkbox"],
 input[type="radio"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /* 1 */
   padding: 0;
-  /* 2 */
 }
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
   -moz-box-sizing: content-box;
-  /* 2 */
   box-sizing: content-box;
 }
 
@@ -143,7 +139,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Consolas, "Andale Mono WT", "Andale Mono", Courier, monospace;
+  font-family: Consolas,"Andale Mono WT","Andale Mono",Courier,monospace;
   font-size: 16px;
   font-size: 1rem;
 }
@@ -259,7 +255,7 @@ html {
 }
 
 h2 {
-  font-family: "Effra", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Effra","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
   font-weight: 400;
   font-size: 24px;
   font-size: 1.5rem;
@@ -359,12 +355,12 @@ p {
   }
 }
 
-.section + .section {
+.section+.section {
   margin-top: 48px;
 }
 
 @media only screen and (min-width: 520px) {
-  .section + .section {
+  .section+.section {
     margin-top: 24px;
   }
 }
@@ -380,7 +376,7 @@ p {
   padding: 8px 12px;
   text-align: center;
   color: #000;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0,0,0,0.5);
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -391,7 +387,7 @@ p {
   top: 0;
   right: 0;
   border-width: 0 0 42px 110px;
-  border-color: transparent rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) transparent;
+  border-color: transparent rgba(0,0,0,0.1) rgba(0,0,0,0.1) transparent;
   border-style: solid;
   z-index: -1;
   -webkit-transition: all .2s;
@@ -406,7 +402,7 @@ p {
 }
 
 .Button:hover:before {
-  border-color: transparent rgba(200, 149, 26, 0.1) rgba(200, 149, 26, 0.1) transparent;
+  border-color: transparent rgba(200,149,26,0.1) rgba(200,149,26,0.1) transparent;
 }
 
 @media only screen and (min-width: 480px) {
