@@ -136,6 +136,12 @@ module.exports = function(grunt) {
 				cwd: 'src/img',
 				src: '**/*',
 				dest: '<%= project.distImgDir %>'
+			},
+			fonts: {
+				expand: true,
+				cwd: 'src/fonts',
+				src: '**/*',
+				dest: '<%= project.cssDir %>/fonts'
 			}
 		},
 
@@ -303,7 +309,7 @@ module.exports = function(grunt) {
 	*/
 	grunt.registerTask('build', [
 		'clean:dist',
-		'copy:images',
+		'copy',
 		'sass:dist',
 		'autoprefixer',
 		'bake'
