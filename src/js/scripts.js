@@ -1,5 +1,1 @@
-(function() {
-    
-    'use strict'
-
-})(document);
+// Scripts file

@@ -1,53 +1,56 @@
-// --------------------------------------------------------------------------
-// Setup 
-// --------------------------------------------------------------------------
+//	Styles file
 @import "_setup.scss";
 
-
-// --------------------------------------------------------------------------
-// Lycra 
-// --------------------------------------------------------------------------
-@import "lycra.scss/lycra.scss";
-
-
-
-// --------------------------------------------------------------------------
-// Global 
-// --------------------------------------------------------------------------
-
-// @import "global/_variable.scss";
-// @import "global/_function.scss";
-// @import "global/_mixin.scss";
+//	Globals
+@import "globals/_functions.scss";
+@import "globals/_variables.scss";
+@import "globals/_mixins.scss";
+@import "globals/_helpers.scss";
+@import "globals/_keyframes.scss";
 
 
-
-// --------------------------------------------------------------------------
-// Element 
-// --------------------------------------------------------------------------
-
-@import "element/_body.scss";
-@import "element/_heading.scss";
-@import "element/_link.scss";
-@import "element/_paragraph.scss";
+//	Base files
+@import "base/_normalize.scss";
+@import "base/_main.scss";
+@import "base/_headings.scss";
+@import "base/_paragraphs.scss";
+// @import "base/_lists.scss";
+// @import "base/_img.scss";
 
 
+//	Components
 
-// --------------------------------------------------------------------------
-// Base 
-// --------------------------------------------------------------------------
+// Grid
+//
+// Styleguide 1.
+@import "components/_grid.scss";
 
-@import "base/_image.scss";
-@import "base/_list.scss";
-@import "base/_logo.scss";
-@import "base/_paint.scss";
-@import "base/_section.scss";
+// Baseline Grid
+//
+// Styleguide 2.
+@import "components/_baseline.scss";
+
+// Buttons
+//
+// Styleguide 3.
+@import "components/_buttons.scss";
+// @import "components/_links.scss";
+@import "components/_icons.scss";
+// @import "components/_formfields.scss";
+// @import "components/_lists.scss";
+@import "components/_navbar.scss";
+// @import "components/_tile.scss";
+// @import "components/_dropdown.scss";
+// @import "components/_videoplayer.scss";
+@import "components/_panel.scss";
+// @import "components/_reveal.scss";
+// @import "components/_paint.scss";
+@import "components/_type.scss";
+
+@import "components/_footer.scss";
 
 
 
-// --------------------------------------------------------------------------
-// Component 
-// --------------------------------------------------------------------------
+//	PROJECTS
 
-@import "component/_buttons.scss";
-@import "component/_grid.scss";
-@import "component/_vcard.scss";
+@import "projects/_rachel.scss";
