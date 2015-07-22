@@ -102,8 +102,8 @@ module.exports = function(grunt) {
 		bake: {
 			build: {
 				options: {
-					// content: "<%= project.src %>/data/data.json"
-					content: "curl -X GET https://cdn.contentful.com/spaces/w7rvkswp05bs?access_token=a5003406a217dfedf507cd2dc078b117b5acb8f134ee54ebdb6405bc2bf6bf7c"
+					content: "<%= project.src %>/data/data.json"
+					// content: "curl -X GET https://cdn.contentful.com/spaces/w7rvkswp05bs?access_token=a5003406a217dfedf507cd2dc078b117b5acb8f134ee54ebdb6405bc2bf6bf7c"
 				},
 
 				files: {
