@@ -279,7 +279,7 @@ q {
 
 small {
   font-size: 16px;
-  font-size: 0.88889rem;
+  font-size: .88889rem;
 }
 
 sub,
@@ -771,11 +771,11 @@ p,
 
 .btn--small {
   font-size: 12px;
-  font-size: 0.66667rem;
+  font-size: .66667rem;
   line-height: 24px;
   line-height: 1.33333rem;
   padding-top: 3px;
-  padding-top: 0.16667rem;
+  padding-top: .16667rem;
   margin-bottom: 21px;
   margin-bottom: 1.16667rem;
   line-height: 20px;
@@ -816,7 +816,7 @@ p,
 
 .btn__circle--small[class*="icon-"] {
   font-size: 16px;
-  font-size: 0.88889rem;
+  font-size: .88889rem;
 }
 
 .btn--light {
