@@ -7,3 +7,13 @@
 	@include body-type($fs__b);
 	color: $colour__base;
 }
+
+a {
+	color: #FF4500;
+	transition: color .4s;
+
+	&:hover {
+		color: $colour__base;
+		transition: color .4s;
+	}
+}

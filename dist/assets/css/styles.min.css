@@ -424,8 +424,8 @@ h1,
   letter-spacing: 0.5px;
   font-size: 50px;
   font-size: 2.77778rem;
-  line-height: 70px;
-  line-height: 3.88889rem;
+  line-height: 60px;
+  line-height: 3.33333rem;
   margin: 0 0 6% 0;
   color: #000;
 }
@@ -433,10 +433,10 @@ h1,
 @media only screen and (min-width: 520px) {
   h1,
   .h1 {
-    font-size: 57.5px;
-    font-size: 3.19444rem;
-    line-height: 80.5px;
-    line-height: 4.47222rem;
+    font-size: 52.5px;
+    font-size: 2.91667rem;
+    line-height: 69px;
+    line-height: 3.83333rem;
   }
 }
 
@@ -445,8 +445,8 @@ h1,
   .h1 {
     font-size: 62.5px;
     font-size: 3.47222rem;
-    line-height: 87.5px;
-    line-height: 4.86111rem;
+    line-height: 75px;
+    line-height: 4.16667rem;
   }
 }
 
@@ -461,6 +461,18 @@ p,
   line-height: 1.5rem;
   margin: 0 0 24px 0;
   color: #000;
+}
+
+a {
+  color: #FF4500;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}
+
+a:hover {
+  color: #000;
+  -webkit-transition: color .4s;
+  transition: color .4s;
 }
 
 .container {
