@@ -12,3 +12,12 @@ ol {
 	padding-left: 0;
 	margin: $bl 0;
 }
+
+.bulletless {
+	list-style: none;
+	margin-left: $bl * 2;
+
+	li + li {
+		margin-top: $bl * .5;
+	}
+}
