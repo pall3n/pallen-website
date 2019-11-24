@@ -3,9 +3,9 @@
 @mixin respond-to($media) {
 	@if $media == 'med' {
 		@media only screen and (min-width : $break--m) { @content; }
-	} @elseif $media == 'large' {
+	} @else if $media == 'large' {
 		@media only screen and (min-width : $break--l) { @content; }
-	} @elseif $media == 'xlarge' {
+	} @else if $media == 'xlarge' {
 		@media only screen and (min-width : $break--xl) { @content; }
 	}
 }
@@ -88,7 +88,7 @@
 //	REM Font size mixin
 @mixin font-size($font-size: $fs__b) {
 	font-size: $font-size + 0px;
-	font-size: convert-font-to-relative($font-size) + 0rem;	
+	font-size: convert-font-to-relative($font-size) + 0rem;
 }
 
 @mixin line-height($font-size: $fs__b, $increase: 1.5) {
